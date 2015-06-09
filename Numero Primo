@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	
+    //Un programa que pida un número del 1 al 5 y diga si es primo o no.
+    
+    int numero;
+    int i;
+    
+    printf("Dame un numero desde 1 hasta 5: ");
+    scanf("%d", &numero);
+    
+    if(numero == 1) 
+    {
+        printf("Tu numero no es primo");
+    }
+    
+    if(numero > 1)
+    {
+        for(i=2; i<numero; i++)
+        {
+            if(numero%i == 0)
+            {
+                printf("Tu numero no es primo");
+                return 0;
+            }
+        }
+        printf("Tu numero es primo");
+    }
+return 0;
+}
